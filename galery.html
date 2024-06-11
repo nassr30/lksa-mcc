@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri | MCC Bumiayu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Akhir AOS -->
+    <style type="text/css">
+      .c-f {
+        margin-top: 5em;
+        margin-bottom: 5em;
+      }
+
+      .tentang-kami a,
+      .quick-links a {
+        color: white;
+        transition: color 0.3s ease;
+      }
+
+      .tentang-kami a:hover,
+      .quick-links a:hover,
+      .social-icon:hover {
+        color: orange;
+      }
+
+      .social-icon {
+        transition: color 0.3s ease;
+        color: white;
+      }
+
+      .card-img-top {
+        transition: transform 0.5s;
+        cursor: pointer;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .card-img-top:hover {
+        transform: scale(1.1);
+        filter: brightness(50%);
+      }
+
+      .card-title-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .card:hover .card-title-overlay {
+        opacity: 1;
+      }
+
+      .card {
+        position: relative;
+      }
+
+      .card-body {
+        padding-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Awal Navbar -->
+    <script>
+      window.onload = function () {
+        // Menampilkan dropdown menu ketika menu dropdown dihover
+        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+          dropdown.addEventListener("mouseenter", function () {
+            var dropdownMenu = this.querySelector(".dropdown-menu");
+            dropdownMenu.classList.add("show");
+          });
+
+          // Menyembunyikan dropdown menu ketika keluar dari menu dropdown
+          dropdown.addEventListener("mouseleave", function () {
+            var dropdownMenu = this.querySelector(".dropdown-menu");
+            dropdownMenu.classList.remove("show");
+          });
+        });
+
+        // Menutup dropdown menu ketika klik di luar area dropdown
+        window.addEventListener("click", function (event) {
+          if (!event.target.matches(".dropdown-toggle")) {
+            document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+              menu.classList.remove("show");
+            });
+          }
+        });
+
+        // Scroll detection for navbar shrink
+        window.addEventListener("scroll", function () {
+          var navbar = document.querySelector(".navbar");
+          if (window.scrollY > 50) {
+            navbar.classList.add("shrink");
+          } else {
+            navbar.classList.remove("shrink");
+          }
+        });
+      };
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/Logo_Muhammadiyah.png" alt="" width="150" height="100" class="d-inline-block align-text-top" />
+          <span class="ms-2">MCC Bumiayu</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Media </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="berita.html">Berita</a></li>
+                <li><a class="dropdown-item" href="galery.html">Galeri</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tentang kami </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                <li><a class="dropdown-item" href="visi-misi.html">Visi Misi</a></li>
+                <li><a class="dropdown-item" href="pendaftaran.html">Pendaftaran</a></li>
+                <li><a class="dropdown-item" href="data-anak-asuh.html">Data Anak Asuh</a></li>
+                <li><a class="dropdown-item" href="fasilitas.html">Fasilitas</a></li>
+                <li><a class="dropdown-item" href="kontak.html">Kontak</a></li>
+              </ul>
+            </div>
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> LKSA </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Web 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Galeri -->
+    <section id="galeri" class="jumbotron text-center c-f">
+      <div class="container" data-aos="fade-right" style="padding-top: 100px">
+        <div class="row text-center mb-3">
+          <div class="col" data-aos-duration="1500">
+            <h2 class="white-text text-center fw-bold mb-5">Galeri Kegiatan</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200">
+            <div class="card border-0 shadow-lg">
+              <img src="img/Galeri 2.jpeg" class="card-img-top rounded-top" alt="Pengajian" />
+              <div class="card-body text-center">
+                <div class="card-title-overlay">Pengajian</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1100">
+            <div class="card border-0 shadow-lg">
+              <img src="img/Galeri 4.jpeg" class="card-img-top rounded-top" alt="Mudikmu" />
+              <div class="card-body text-center">
+                <div class="card-title-overlay">Mudikmu</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card border-0 shadow-lg">
+              <img src="img/Galeri 3.jpeg" class="card-img-top rounded-top" alt="Tapak Suci" />
+              <div class="card-body text-center">
+                <div class="card-title-overlay">Tapak Suci</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Galeri -->
+
+    <!-- Footer -->
+    <footer class="text-white text-start bg-blue py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 tentang-kami">
+            <h5 class="text-white fw-bold mb-4">Alamat</h5>
+            <p class="alamat-jalan">Jalan Lingkar Jatisawit, Kec. Bumiayu, Kabupaten Brebes, Jawa Tengah, Indonesia 52273</p>
+          </div>
+          <div class="col-md-4 mb-4 tentang-kami">
+            <h5 class="text-white fw-bold mb-4">Tentang Kami</h5>
+            <p>Tentang PAKYM Pakym adalah satu satunya Muhammadiyah Children Center (Lembaga Kesejahteraan Sosial Anak) yang berada di Kota Solo, dan sudah berdiri sejak tanggal 31 Agustus 1930.</p>
+          </div>
+          <div class="col-md-4 mb-4 quick-links">
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                <ul class="list-unstyled footer-menu">
+                  <li><a href="#home" class="text-decoration-none">Home</a></li>
+                  <li><a href="#about" class="text-decoration-none">About</a></li>
+                  <li><a href="#berita" class="text-decoration-none">Berita</a></li>
+                  <li><a href="#gallery" class="text-decoration-none">Galeri</a></li>
+                  <li><a href="#contact" class="text-decoration-none">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-4">
+          <div class="container">
+            <hr />
+            <a href="https://www.instagram.com/cantonabayuaji/" class="text-decoration-none me-3 social-icon"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="https://www.facebook.com/cantonabayuaji" class="text-decoration-none me-3 social-icon"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="https://twitter.com/cantonaaba_" class="text-decoration-none me-3 social-icon"><i class="bi bi-twitter fs-4"></i></a>
+            <a href="https://www.youtube.com/cantonabayuaji3273" class="text-decoration-none me-3 social-icon"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="container">
+            <p class="mb-0">Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/cantonabayuaji/" class="text-decoration-none text-primary fw-bold">Team Project</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+.c-item {
+  height: 710px;
+}
+.c-img {
+  height: 120%;
+}
+.c-c {
+  top: 40%;
+}
+.c-w {
+  color: black;
+}
+.c-p {
+  height: 109vh;
+  margin-top: 5em;
+}
+.c-o {
+  margin-top: 50px;
+}
+
+.dropdown-toggle::after {
+  display: none; /* Menghilangkan segitiga terbalik */
+  pointer-events: none; /* Mencegah interaksi dengan caret */
+}
+/* Logo di navbar */
+.navbar-brand img {
+  max-width: 120px; /* Atur lebar maksimum logo */
+  max-height: 70px; /* Atur tinggi maksimum logo */
+  transition: all 0.3s ease; /* Tambahkan transisi untuk perubahan ukuran logo */
+}
+
+/* Tambahkan gaya untuk logo di navbar yang di-scroll */
+nav.scrolled .navbar-brand img {
+  max-width: 90px; /* Atur lebar maksimum logo ketika di-scroll */
+  max-height: 50px; /* Atur tinggi maksimum logo ketika di-scroll */
+}
+
+/* Tambahkan gaya untuk navbar yang di-scroll */
+nav.scrolled {
+  padding: 10px 0; /* Atur padding navbar yang lebih kecil */
+  height: 60px; /* Atur tinggi navbar yang lebih kecil */
+}
+
+/* Tambahkan transisi agar perubahan ukuran navbar menjadi lebih mulus */
+nav {
+  transition: all 0.3s ease;
+}
+
+/* Efek hover pada link */
+.navbar-nav .nav-link:hover {
+  color: #ffffff; /* Warna teks yang diinginkan saat disentuh */
+  border-bottom: 2px solid #ffffff; /* Garis bawah saat disentuh */
+}
+
+/* Efek hover pada dropdown */
+.dropdown-menu .dropdown-item:hover {
+  background: linear-gradient(135deg, #192959, #0e684a);
+  border: none; /* Menghapus garis atau border */
+  color: #ffffff; /* Warna teks putih saat disentuh */
+  border-bottom: none; /* Menghilangkan garis bawah */
+  transition: background-color 0.3s ease; /* Efek transisi saat mengubah warna */
+}
+.dropdown-menu {
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.dropdown-menu.show {
+  max-height: 500px; /* Atur tinggi maksimum dropdown menu sesuai kebutuhan */
+}
+
+.navbar {
+  background: linear-gradient(135deg, #192959, #0e684a);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  width: 120px; /* Ubah lebar logo sesuai kebutuhan */
+  height: auto; /* Atur tinggi agar rasio aspek dipertahankan */
+  margin-right: 10px; /* Atur jarak kanan antara logo dan teks */
+}
+
+/* Default navbar style */
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 1rem;
+}
+
+/* Shrinked navbar style */
+.navbar.shrink {
+  padding: 0.5rem 1rem;
+}
+
+/* Efek hover pada dropdown saat menu induk disentuh */
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Membuat dropdown muncul saat menu induk disentuh */
+}
+
+/* CSS untuk efek garis putih di bawah menu saat disentuh */
+.navbar-nav .nav-link {
+  position: relative;
+}
+.carousel-caption {
+  color: white; /* Mengubah warna teks menjadi putih */
+  left: 10%; /* Sesuaikan jarak dari kiri sesuai kebutuhan */
+  text-align: left; /* Tekstur teks diatur ke kiri */
+}
+
+.carousel-item img {
+  filter: brightness(50%); /* Menggelapkan warna gambar */
+}
+
+/* CSS untuk berita card */
+.berita-card {
+  transition: transform 0.3s;
+}
+
+.berita-card:hover {
+  transform: scale(1.05);
+}
+/* CSS untuk efek hover */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+.white-text {
+  color: #33416b; /* Warna biru */
+}
+.navbar-nav .dropdown .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Jarak garis bawah dari teks */
+  left: 0;
+  width: 0; /* Lebar garis awal */
+  height: 2px; /* Ketebalan garis bawah */
+  background-color: white; /* Warna garis bawah */
+  transition: width 0.5s ease; /* Efek transisi dengan durasi 0.5 detik */
+}
+
+.navbar-nav .dropdown:hover .nav-link::after {
+  width: 100%;
+}
+
+.navbar-nav .dropdown:focus-within .nav-link::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  display: none;
+}
+
+.navbar-nav .nav-item:hover .dropdown-menu {
+  display: block;
+}
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.btn-primary {
+  background-image: linear-gradient(to bottom, #007bff); /* Gradien biru primary ke hitam */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, background-image 0.5s ease;
+  background: linear-gradient(to right, #192959, #0e684a); /* Gradien biru kehijauan */
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan saat dihover */
+  color: #fff; /* Warna teks tetap putih saat tombol disentuh */
+  background: linear-gradient(to right, #192959, #0e684a);
+}
+
+#leadership {
+  height: 100vh;
+  background: linear-gradient(to bottom, #2c3e50, #000000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2c3e50, #000000);
+}
+
+/* Mengatur ukuran gambar leader */
+.leader-img img {
+  width: 200px; /* Ubah ukuran gambar sesuai keinginan */
+  height: 200px; /* Ubah ukuran gambar sesuai keinginan */
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+/* Mengatur margin atas pada gambar leader */
+.leader-img {
+  margin-top: 100px; /* Ubah margin sesuai keinginan */
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px; /* Jarak dari bawah */
+  right: 40px; /* Jarak dari kanan */
+  z-index: 1000; /* Menentukan tumpukan tombol */
+}
+
+/* Gaya untuk ikon WhatsApp */
+.whatsapp-float img {
+  width: 60px; /* Lebar ikon */
+  height: 60px; /* Tinggi ikon */
+  border-radius: 50%; /* Untuk membuatnya bulat */
+  border: 2px solid #fff; /* Garis putih di sekitar ikon */
+  box-shadow: 0px 0px 3px #777; /* Bayangan ringan */
+}
+
+/* Gaya untuk kartu */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek bayangan dan hover pada kartu */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk judul kartu */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Gaya untuk teks deskripsi kartu */
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.bg-blue {
+  background-image: linear-gradient(90deg, #192959, #0e684a);
+}
+
+/* Menu hover effect */
+.footer-menu a:hover {
+  border-bottom: 1px solid white; /* Tambahkan garis bawah putih saat disentuh */
+}

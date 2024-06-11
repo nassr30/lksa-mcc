@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muhammadiyah Children Center Bumiayu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- AOS -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Akhir AOS -->
+    
+    <style type="text/css">
+.c-f{
+  margin-top: 5em;
+  margin-bottom:5em ;
+}
+.tentang-kami a {
+  color: white; /* Warna awal teks */
+  transition: color 0.3s ease; /* Transisi smooth untuk warna teks */
+}
+.tentang-kami a:hover {
+  color: orange; /* Mengubah warna teks menjadi oranye saat disentuh */
+}
+.quick-links a:hover {
+  color: orange; /* Mengubah warna teks menjadi oranye saat disentuh */
+}
+
+.quick-links a {
+  color: white; /* Warna awal teks */
+  transition: color 0.3s ease; /* Transisi smooth untuk warna teks */
+}
+
+.quick-links a:hover {
+  color: orange; /* Mengubah warna teks menjadi oranye saat disentuh */
+}
+
+/* Efek hover pada ikon media sosial */
+.social-icon {
+  transition: color 0.3s ease; /* Transisi smooth untuk warna ikon */
+  color: white; /* Warna awal ikon */
+}
+
+.social-icon:hover {
+  color: orange; /* Mengubah warna ikon menjadi oranye saat disentuh */
+}
+
+   </style>
+  </head>
+  <body>
+
+<!-- Awal Navbar -->
+<script>
+  window.onload = function() {
+    // Menampilkan dropdown menu ketika menu dropdown dihover
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+      dropdown.addEventListener('mouseenter', function() {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.add('show');
+      });
+  
+      // Menyembunyikan dropdown menu ketika keluar dari menu dropdown
+      dropdown.addEventListener('mouseleave', function() {
+        var dropdownMenu = this.querySelector('.dropdown-menu');
+        dropdownMenu.classList.remove('show');
+      });
+    });
+  
+    // Menutup dropdown menu ketika klik di luar area dropdown
+    window.addEventListener('click', function(event) {
+      if (!event.target.matches('.dropdown-toggle')) {
+        document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+          menu.classList.remove('show');
+        });
+      }
+    });
+  
+    // Scroll detection for navbar shrink
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shrink');
+      } else {
+        navbar.classList.remove('shrink');
+      }
+    });
+  };
+  
+</script>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="img/Logo_Muhammadiyah.png" alt="" width="150" height="100" class="d-inline-block align-text-top">
+      <span class="ms-2">MCC Bumiayu</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Media
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="berita.html">Berita</a></li>
+            <li><a class="dropdown-item" href="galery.html">Galeri</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tentang kami
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+            <li><a class="dropdown-item" href="visi-misi.html">Visi Misi</a></li>
+            <li><a class="dropdown-item" href="pendaftaran.html">Pendaftaran</a></li>
+            <li><a class="dropdown-item" href="data-anak-asuh.html">Data Anak Asuh</a></li>
+            <li><a class="dropdown-item" href="fasilitas.html">Fasilitas</a></li>
+            <li><a class="dropdown-item" href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> LKSA
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Web 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Akhir Navbar -->
+  
+
+<!-- Slider -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div class="carousel-inner">
+    <div class="carousel-item active c-item">
+      <img src="img/Gedung mcc.png" class="d-block w-100 c-img" alt="...">
+      <div class="carousel-caption c-c c-w">
+        <h1>Welcome to <br>Muhammadiyah Children Center Bumiayu</h1>
+        <p>Muhammadiyah Children Center Bumiayu adalah salah satu Lembaga Kesejahteraan Sosial Anak<br> yang berada di Kota Bumiayu, dan sudah berdiri sejak tahun 2020</p>
+        <button class="btn btn-primary" role="button">Hubungi kami</button>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="img/gedung mcc 1.jpg" class="d-block w-100 c-img " alt="...">
+      <div class="carousel-caption c-c c-w">
+        <h1>Tujuan</h1>
+        <p>Mencetak anak asuh menjadi manusia muslim berakhlaq mulia, berwawasan budaya bangsa <br>dan dapat hidup mandiri serta berguna bagi bangsa dan negara</p>
+        <button class="btn btn-primary" role="button">Pendaftaran</button>
+      </div>
+    </div>
+    <div class="carousel-item c-item">
+      <img src="img/tapak suci header.jpeg" class="d-block w-100 c-img " alt="...">
+      <div class="carousel-caption c-c c-w">
+        <h1>Tujuan</h1>
+        <p>Mencetak anak asuh menjadi manusia muslim berakhlaq mulia, berwawasan budaya bangsa <br>dan dapat hidup mandiri serta berguna bagi bangsa dan negara</p>
+        <button class="btn btn-primary" role="button">Pendaftaran</button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" aria-label="Previous">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" aria-label="Next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+<!-- Akhir Slider -->
+
+<!-- Sambutan -->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+
+  .full-bg {
+    background: linear-gradient(to bottom, #192959, #0e684a);
+    padding: 50px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .greeting-container {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .greeting-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .greeting-img {
+    flex: 1 1 45%;
+    max-width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Tambahkan ini untuk sentralisasi gambar */
+  }
+
+  .greeting-img img {
+    width: 70%;
+    height: auto;
+    border-radius: 50%; /* Ubah menjadi lingkaran */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    background-color: #fff;
+  }
+
+  .greeting-text {
+    flex: 1 1 55%;
+    max-width: 55%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .greeting-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ubah warna teks menjadi putih */
+  }
+
+  .greeting-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ffffff; /* Ubah warna teks menjadi putih */
+  }
+
+  /* Menonaktifkan tampilan garis bawah pada tautan */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    .greeting-img, .greeting-text {
+      flex: 1 1 100%;
+      max-width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .greeting-text h2 {
+      font-size: 28px;
+    }
+
+    .greeting-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #ffffff; /* Ubah warna teks menjadi putih */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="full-bg">
+  <div class="container">
+    <div class="greeting-container">
+      <div class="greeting-content">
+        <div class="greeting-img"data-aos="fade-right"data-aos-duration="1500">
+          <img src="img/sambutan 3.png" alt="Ketua">
+        </div>
+        <div class="greeting-text"data-aos="fade-left"data-aos-duration="2000">
+          <h2>Sambutan Ketua</h2>
+          <p>Selamat datang di website resmi Muhammadiyah Children Center Bumiayu.</p>
+          <p>Kami berkomitmen untuk memberikan pelayanan terbaik kepada seluruh anggota dan masyarakat.</p>
+          <p>Dengan semangat kebersamaan, kami akan terus berupaya untuk mengembangkan potensi dan kualitas pelayanan kami.</p>
+          <p>Terima kasih atas kunjungan Anda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Akhir Sambutan -->
+
+<!-- Struktur Organisasi -->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+
+  #leadership {
+    background: linear-gradient(to bottom, #2c3e50, #000000);
+    color: white;
+  }
+
+  .leader-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #fff;
+  }
+</style>
+</head>
+<body>
+
+<section id="leadership" class="jumbotron text-center" style="background: linear-gradient(to bottom, #2c3e50, #000000);">
+  <div class="container" data-aos="fade-right" style="padding-top: 100px">
+    <div class="row text-center mb-3">
+      <div class="col" data-aos-duration="1500">
+        <h2 class="fw-bold mb-5" style="color: white;">Struktur Pimpinan</h2>
+      </div>
+    </div>
+    <div id="leadersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img" data-aos="fade-up" data-aos-duration="2000">
+                  <img src="img/ketua_mccbumiayu-removebg-preview.png" alt="CEO" class="rounded-circle">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Suedi, S.Ag., S.Kom., M.pd</h4>
+                  <p class="mb-1 text-white">Penasehat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Additional carousel items here -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img">
+                  <img src="img/ketua_mccbumiayu-removebg-preview.png" alt="COO" class="rounded-circle">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Amin Setiyono, S.Pd</h4>
+                  <p class="mb-1 text-white">Ketua Umum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img">
+                  <img src="img/icon pejabat 2.png" alt="CFO" class="rounded-circle">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Faiz Faula</h4>
+                  <p class="mb-1 text-white">Sekretaris</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img" style="margin-top: 100px;">
+                  <img src="img/icon pejabat.png" alt="CTO" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #fff;">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Thoeron</h4>
+                  <p class="mb-1 text-white">Bendahara</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img" style="margin-top: 100px;">
+                  <img src="img/icon pejabat.png" alt="CTO" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #fff;">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Mathopani</h4>
+                  <p class="mb-1 text-white">Pengasuh</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img" style="margin-top: 100px;">
+                  <img src="img/icon pejabat.png" alt="CTO" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #fff;">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Esti</h4>
+                  <p class="mb-1 text-white">Kerumahtanggan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-4">
+              <div class="leader text-center">
+                <div class="leader-img" style="margin-top: 100px;">
+                  <img src="img/icon pejabat.png" alt="CTO" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid #fff;">
+                </div>
+                <div class="leader-details mt-3">
+                  <h4 class="fw-bold text-white">Tim Kesehatan Klinik Pratama Aisyiyah Bumiayu</h4>
+                  <p class="mb-1 text-white">Gizi & Kesehatan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#leadersCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#leadersCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Akhir Struktur Organisasi -->
+
+<!-- Berita -->
+
+<section id="berita" class="jumbotron text-center c-f">
+  <div class="container" data-aos="fade-right" >
+    <!-- Menambahkan padding-top -->
+    <div class="row text-center mb-3">
+      <div class="col" data-aos-duration="1500">
+        <h2 class="white-text text-center fw-bold mb-5">Rilis Berita</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 border-0 berita-card">
+          <img src="img/Pengajian.png" class="card-img-top rounded-top" alt="gallery 1"data-aos="fade-up"data-aos-duration="1000"/>
+          <div class="card-body">
+            <h5 class="card-title text-start">Pengajian Rutin</h5>
+            <p class="card-text text-start">Deskripsi acara Pengajian Rutin.</p>
+            <a href="https://mccbumiayupengajian.blogspot.com/2024/03/pengajian-rutin-di-mcc-bumiayu.html" class="btn btn-primary btn-lg float-start">Selengkapnya ➝</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 border-0 berita-card">
+          <img src="img/Tapak Suci.jpeg" class="card-img-top rounded-top" alt="gallery 1"data-aos="fade-up"data-aos-duration="1100" />
+          <div class="card-body">
+            <h5 class="card-title text-start">Tapak Suci</h5>
+            <p class="card-text text-start">Deskripsi Tapak Suci.</p>
+            <a href="https://mccbumiayupengajian.blogspot.com/2024/03/bela-diri-tapak-suci.html" class="btn btn-primary btn-lg float-start">Selengkapnya ➝</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 border-0 berita-card">
+          <img src="img/MudikMu (2).jpeg" class="card-img-top rounded-top" alt="gallery 1"data-aos="fade-up"data-aos-duration="1200"/>
+          <div class="card-body">
+            <h5 class="card-title text-start">Posko MudikMu</h5>
+            <p class="card-text text-start">Deskripsi acara Posko MudikMu</p>
+            <a href="https://mccbumiayupengajian.blogspot.com/2024/03/mudikmu-di-mcc-bumiayu.html" class="btn btn-primary btn-lg float-start">Selengkapnya ➝</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Akhir Berita -->
+
+
+ <!-- Tombol WhatsApp -->
+ <div class="whatsapp-float">
+  <a href="https://wa.me/+6282325312746" target="_blank">
+      <img src="img/Whatsaap.png" alt="WhatsApp">
+  </a>
+</div>
+<!-- Akhir Tombol Whatsapp -->
+
+<!-- Galeri -->
+<!-- Galeri -->
+<style>
+  .galery-container {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Warna gradien abu-abu muda */
+    padding: 50px 0;
+  }
+
+  .card-img-top {
+    transition: transform 0.5s;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-img-top:hover {
+    transform: scale(1.1);
+    filter: brightness(50%);
+  }
+
+  .card-title-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card:hover .card-title-overlay {
+    opacity: 1;
+  }
+
+  .card {
+    position: relative; /* Diperlukan agar overlay judul berada di atas gambar */
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+
+  h2.white-text {
+    color: #192959; /* Ubah warna teks menjadi abu-abu gelap agar lebih kontras dengan background */
+  }
+</style>
+
+<section id="galery" class="jumbotron text-center galery-container">
+  <div class="container">
+    <div class="row text-center mb-3">
+      <div class="col">
+        <h2 class="white-text text-center fw-bold mb-5" data-aos="fade-up">Galeri Kegiatan</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1200">
+        <div class="card border-0 shadow-lg">
+          <img src="img/Galeri 2.jpeg" class="card-img-top rounded-top" alt="Pengajian" />
+          <div class="card-body text-center">
+            <div class="card-title-overlay">Silaturahmi</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1100">
+        <div class="card border-0 shadow-lg">
+          <img src="img/renang.jpeg" class="card-img-top rounded-top" alt="Mudikmu" />
+          <div class="card-body text-center">
+            <div class="card-title-overlay">Renang</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card border-0 shadow-lg">
+          <img src="img/Galeri TS.jpeg" class="card-img-top rounded-top" alt="Tapak Suci" />
+          <div class="card-body text-center">
+            <div class="card-title-overlay">Tapak Suci</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="galery.html" class="btn btn-primary btn-lg">Selengkapnya ➝</a>
+    </div>
+  </div>
+</section>
+<!-- Akhir Galeri -->
+
+
+
+    <!-- Footer -->
+    <footer class="text-white text-start bg-blue py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4 mb-4 tentang-kami">
+                  <h5 class="text-white fw-bold mb-4">Alamat</h5>
+                  <p class="alamat-jalan">Jalan Lingkar Jatisawit, Kec. Bumiayu, Kabupaten Brebes,
+                    Jawa Tengah, Indonesia 52273</p>
+              </div>
+              <div class="col-md-4 mb-4 tentang-kami">
+                  <h5 class="text-white fw-bold mb-4">Tentang Kami</h5>
+                  <p>Tentang PAKYM
+                    Pakym adalah satu satunya Muhammadiyah Children Center (Lembaga Kesejahteraan Sosial Anak) yang berada <br> Kota Solo, dan sudah berdiri sejak tanggal 31 Agustus 1930.</p>
+              </div>
+              <div class="col-md-4 mb-4 quick-links">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-menu">
+                      <li><a href="#home" class="text-decoration-none">Home</a></li>
+                      <li><a href="#about" class="text-decoration-none">About</a></li>
+                      <li><a href="#berita" class="text-decoration-none">Berita</a></li>
+                      <li><a href="#gallery" class="text-decoration-none">Galeri</a></li>
+                      <li><a href="#contact" class="text-decoration-none">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+      </div>
+      <!-- Social Media Icons -->
+      <div class="text-center mb-4">
+          <div class="container">
+              <hr> <!-- Garis horizontal di sini -->
+              <a href="https://www.instagram.com/cantonabayuaji/" class="text-decoration-none me-3 social-icon"><i class="bi bi-instagram fs-4"></i></a>
+              <a href="https://www.facebook.com/cantonabayuaji" class="text-decoration-none me-3 social-icon"><i class="bi bi-facebook fs-4"></i></a>
+              <a href="https://twitter.com/cantonaaba_" class="text-decoration-none me-3 social-icon"><i class="bi bi-twitter fs-4"></i></a>
+              <a href="https://www.youtube.com/cantonabayuaji3273" class="text-decoration-none me-3 social-icon"><i class="bi bi-youtube fs-4"></i></a>
+          </div>
+      </div>
+      <!-- End of Social Media Icons -->
+  
+      <!-- Footer Bottom -->
+      <div class="text-center">
+          <div class="container">
+              <p class="mb-0">Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/cantonabayuaji/" class="text-decoration-none text-primary fw-bold">Team Project</a></p>
+          </div>
+      </div>
+      <!-- End of Footer Bottom -->
+  </footer>
+
+      
+<!-- Akhir Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
