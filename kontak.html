@@ -120,31 +120,54 @@
     </nav>
     <!-- Akhir Navbar -->
 
-    <!-- Contact -->
     <section id="contact" class="jumbotron text-center c-f">
       <div class="container" data-aos="fade-right" style="padding-top: 100px">
-        <div class="row text-center mb-3">
+        <div class="row text-center mb-5">
           <div class="col" data-aos-duration="1500">
-            <h2 class="white-text text-center fw-bold mb-5">Kontak</h2>
+            <h2 class="white-text fw-bold">Kontak</h2>
           </div>
         </div>
-        <div class="row justify-content-center mb-3">
-          <div class="col-md-7">
-            <form class="p-4 shadow-sm rounded" style="background-color: #ffffff">
-              <div class="mb-3 text-start">
-                <label for="name" class="form-label" style="font-weight: 500; color: #343a40">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your full name" aria-describedby="name" />
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="card shadow-sm h-100">
+              <div class="card-body p-4">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.481589919258!2d109.020003!3d-7.2603857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f8fbc9644cea1%3A0x831f8d4b7883646c!2sMuhammadiyah%20Children%20Center%20(MCC)%20Panti%20Asuhan%20Putra%20Muhammadiyah%20Bumiayu!5e0!3m2!1sen!2sid!4v1595861597894!5m2!1sen!2sid"
+                  width="100%"
+                  height="400"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                >
+                </iframe>
               </div>
-              <div class="mb-3 text-start">
-                <label for="email" class="form-label" style="font-weight: 500; color: #343a40">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+              <div class="card-body p-4">
+                <form id="pesan apa">
+                  <div class="mb-3 text-start">
+                    <label for="name" class="form-label" style="font-weight: 500; color: #343a40">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap Anda" aria-describedby="name" name="nama" required />
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="email" class="form-label" style="font-weight: 500; color: #343a40">Alamat Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required />
+                  </div>
+                  <div class="mb-3 text-start">
+                    <label for="pesan" class="form-label" style="font-weight: 500; color: #343a40">Pesan</label>
+                    <textarea class="form-control" id="pesan" placeholder="Tulis pesan Anda di sini..." rows="4" name="pesan" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block py-2 fw-bold" style="width: 100%">Kirim</button>
+                  <button class="btn btn-danger btn-loading d-none" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                  </button>
+                  <div id="notification" class="alert alert-success mt-3 d-none" role="alert">Pesan Anda berhasil terkirim!</div>
+                </form>
               </div>
-              <div class="mb-3 text-start">
-                <label for="pesan" class="form-label" style="font-weight: 500; color: #343a40">Message</label>
-                <textarea class="form-control" id="pesan" placeholder="Write your message here..." rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block py-2 fw-bold" style="width: 100%">Send</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -206,6 +229,38 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxUaVsenoG4ejB5TLWOY_bhw366ORMbjhRrhG_PAEa5TU_kvBM--z8Kxm_3z8nzTMbi/exec";
+      const form = document.getElementById("pesan apa");
+      const btnKirim = form.querySelector("button[type='submit']");
+      const btnLoading = form.querySelector(".btn-loading");
+      const notification = document.getElementById("notification");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Tampilkan tombol loading, sembunyikan tombol kirim
+        btnLoading.classList.remove("d-none");
+        btnKirim.classList.add("d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            form.reset(); // Reset formulir setelah sukses
+            notification.classList.remove("d-none"); // Tampilkan notifikasi
+            setTimeout(() => {
+              notification.classList.add("d-none"); // Sembunyikan notifikasi setelah beberapa detik
+            }, 3000); // Menghilangkan notifikasi setelah 3 detik
+            console.log("Success!", response);
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+          })
+          .finally(() => {
+            // Kembalikan tombol loading menjadi tombol kirim setelah selesai
+            btnLoading.classList.add("d-none");
+            btnKirim.classList.remove("d-none");
+          });
+      });
     </script>
   </body>
 </html>
